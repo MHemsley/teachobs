@@ -28,7 +28,7 @@ function viewHandler(req, res, filename) {
 
 function resourceHandler(req, res) {
     var ext = req.url.split('.')[1];
-    fs.readFile(__dirname + '/../public/' + req.url, function(error, content) {
+    fs.readFile(__dirname + '/../' + req.url, function(error, content) {
         if (error) {
             console.log(error);
             res.writeHead(500, {'Content-Type': 'text/html'});
