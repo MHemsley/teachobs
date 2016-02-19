@@ -1,35 +1,21 @@
 var fs = require('fs');
+var file = require('./file.js');
+var assessment = require('./assessment.js');
+var review = require('./review.js');
+var submit = require('./submit.js');
+
 
 function getRouter(req, res) {
     if (req.url === '/') {
-        fs.readFile(__dirname + '/../views/index.html', function(error, content) {
-            if (error) {
-                console.log(error);
-                res.writeHead(500, {'Content-Type': 'text/html'});
-                res.end(error.toString('utf8'));
-            } else {
-                res.writeHead(200, {'Content-Type': 'text/html'});
-                res.end(content.toString('utf8'));
-            }
-        });
+        file.homeHandler(req, res);
     } else if (req.url.search('/assessment') === 0) {
         //
     } else if (req.url.search('/review') === 0) {
         //
     } else if (req.url.indexOf('.') > -1) {
-        var ext = req.url.split('.')[1];
-        fs.readFile(__dirname + '/../public/' + req.url, function(error, content) {
-            if (error) {
-                console.log(error);
-                res.writeHead(500, {'Content-Type': 'text/html'});
-                res.end(error.toString('utf8'));
-            } else {
-                res.writeHead(200, {'Content-Type': 'text/' + ext});
-                res.end(content.toString('utf8'));
-            }
-        });
-
+        file.resourceHandler(req, res);
     } else { // 404
+        file.notFoundHandler(req, res);
 
     }
 }
@@ -38,7 +24,7 @@ function postRouter(req, res) {
     if (req.url.search('/submit') === 0) {
 
     } else { // 404
-
+        file.notFoundHandler(req, res);
     }
 }
 
