@@ -4,6 +4,8 @@
   "description": "Student-teacher observation platform",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "nodemon": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/eliascodes/teachobs/issues"
   },
-  "homepage": "https://github.com/eliascodes/teachobs#readme"
+  "homepage": "https://github.com/eliascodes/teachobs#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.0"
+  }
 }
