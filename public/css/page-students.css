@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: "Lucida Console", Monaco, monospace
+}
+
+nav {
+    margin: 1.5em 1em 1.5em 1em;
+}
+
+.heading {
+    max-width: 1024px;
+    margin: 10em 0 4em 10%;
+}
+
+.table-wrap {
+
+}
+
+.table {
+    max-width: 1024px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
