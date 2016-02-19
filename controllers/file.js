@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 function homeHandler(req, res) {
     fs.readFile(__dirname + '/../views/index.html', function(error, content) {
         if (error) {
