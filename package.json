@@ -1,0 +1,19 @@
+{
+  "name": "teachobs",
+  "version": "1.0.0",
+  "description": "Student-teacher observation platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliascodes/teachobs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eliascodes/teachobs/issues"
+  },
+  "homepage": "https://github.com/eliascodes/teachobs#readme"
+}
