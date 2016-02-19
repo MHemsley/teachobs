@@ -8,6 +8,8 @@ var submit = require('./submit.js');
 function getRouter(req, res) {
     if (req.url === '/') {
         file.homeHandler(req, res);
+    } else if (req.url.search('/yourstudents') === 0) {
+        file.viewHandler(req, res, 'page-students.html');
     } else if (req.url.search('/assessment') === 0) {
         //
     } else if (req.url.search('/review') === 0) {
